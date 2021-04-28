@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+carles_game.egg-info/PKG-INFO
+carles_game.egg-info/SOURCES.txt
+carles_game.egg-info/dependency_links.txt
+carles_game.egg-info/requires.txt
+carles_game.egg-info/top_level.txt
