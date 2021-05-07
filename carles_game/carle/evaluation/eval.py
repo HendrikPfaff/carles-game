@@ -6,13 +6,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-import carle
-from carle.env import CARLE
+import carles_game.carle.carle
+from carles_game.carle.carle.env import CARLE
 
-from carle.mcl import RND2D, AE2D, PufferDetector, SpeedDetector
-from carle.agents import RandomAgent, RandomNetworkAgent
+from carles_game.carle.carle.mcl import RND2D, AE2D, PufferDetector, SpeedDetector
+from carles_game.carle.carle.agents import RandomAgent, RandomNetworkAgent
 
-from evaluation.submission import SubmissionAgent
+from carles_game.carle.evaluation.submission import SubmissionAgent
 
 def evaluate(Agent, rules, wrappers, params_path=None, steps=1024):
     """

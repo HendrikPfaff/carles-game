@@ -18,8 +18,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-import carle
-from carle.env import CARLE
+import carles_game.carle
+from carles_game.carle.carle.env import CARLE
 
 import matplotlib.pyplot as plt
 

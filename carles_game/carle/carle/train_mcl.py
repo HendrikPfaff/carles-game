@@ -6,11 +6,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-import carle
-from carle.env import CARLE
+import carles_game.carle
+from carles_game.carle.carle.env import CARLE
 
-from carle.mcl import RND2D, AE2D
-from carle.agents import RandomAgent, RandomNetworkAgent
+from carles_game.carle.carle.mcl import RND2D, AE2D
+from carles_game.carle.carle.agents import RandomAgent, RandomNetworkAgent
 
 def train(agent_fn,\
         instances=16,\

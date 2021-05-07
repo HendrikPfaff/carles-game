@@ -4,7 +4,7 @@ import argparse
 import numpy as np
 import torch
 
-from carle.env import CARLE
+from carles_game.carle.carle.env import CARLE
 
 class TestEnv(unittest.TestCase):
 

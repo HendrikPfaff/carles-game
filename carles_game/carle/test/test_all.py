@@ -1,7 +1,7 @@
 import unittest
 import argparse
 
-from test.test_env import TestEnv
+from carles_game.carle.test.test_env import TestEnv
 
 if __name__ == "__main__":
 
