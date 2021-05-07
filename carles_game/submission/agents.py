@@ -5,8 +5,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from carle.env import CARLE
-from carle.mcl import RND2D, AE2D 
+from carles_game.carle.carle.env import CARLE
+from carles_game.carle.carle.mcl import RND2D, AE2D
 
 import matplotlib.pyplot as plt
 
@@ -23,7 +23,7 @@ class DemoAgent(nn.Module):
                 if "action_height" in kwargs.keys()\
                 else 64
         self.observation_width = kwargs["observation_width"] \
-                if "observatoin_width" in kwargs.keys()\
+                if "observation_width" in kwargs.keys()\
                 else 256
         self.observation_height = kwargs["observation_height"] \
                 if "observation_height" in kwargs.keys()\
@@ -35,7 +35,7 @@ class DemoAgent(nn.Module):
 
         instances = obs.shape[0]
         action = 1.0 \
-            * (torch.rand(instances,1,self.action_width, self.action_height)\
+            * (torch.rand(instances, 1, self.action_width, self.action_height)\
                 <= self.toggle_rate)
 
         return action
