@@ -17,28 +17,28 @@ class DemoAgent(nn.Module):
         super(DemoAgent, self).__init__()
 
         self.action_width = kwargs["action_width"] \
-                if "action_width" in kwargs.keys()\
-                else 64
+            if "action_width" in kwargs.keys() \
+            else 64
         self.action_height = kwargs["action_height"] \
-                if "action_height" in kwargs.keys()\
-                else 64
+            if "action_height" in kwargs.keys() \
+            else 64
         self.observation_width = kwargs["observation_width"] \
-                if "observation_width" in kwargs.keys()\
-                else 256
+            if "observation_width" in kwargs.keys() \
+            else 256
         self.observation_height = kwargs["observation_height"] \
-                if "observation_height" in kwargs.keys()\
-                else 256
+            if "observation_height" in kwargs.keys() \
+            else 256
 
         self.toggle_rate = 0.100
 
     def forward(self, obs):
-
         instances = obs.shape[0]
         action = 1.0 \
-            * (torch.rand(instances, 1, self.action_width, self.action_height)\
-                <= self.toggle_rate)
+                 * (torch.rand(instances, 1, self.action_width, self.action_height) \
+                    <= self.toggle_rate)
 
         return action
+
 
 class SubmissionAgent(DemoAgent):
 
@@ -46,7 +46,5 @@ class SubmissionAgent(DemoAgent):
         """
         Submission agent, must produce actions (binary toggles) when called
         """
-        
-        super(SubmissionAgent, self).__init__(**kwargs)
 
-        
+        super(SubmissionAgent, self).__init__(**kwargs)
