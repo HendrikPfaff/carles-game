@@ -5,8 +5,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from carle.env import CARLE
-from submission.agents import SubmissionAgent
+from carles_game.carle.carle.env import CARLE
+from carles_game.submission.agents import SubmissionAgent
 
 import bokeh
 import bokeh.io as bio

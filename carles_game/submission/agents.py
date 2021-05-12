@@ -10,6 +10,12 @@ from carles_game.carle.carle.mcl import RND2D, AE2D
 
 import matplotlib.pyplot as plt
 
+class LearningAgent(nn.Module):
+
+    def __init__(self, **kwargs):
+        super(LearningAgent, self).__init__()
+
+
 
 class DemoAgent(nn.Module):
 
